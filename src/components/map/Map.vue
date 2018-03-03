@@ -3,7 +3,7 @@
     <div id="app">
       <v-map :zoom="zoom" :center="center">
         <v-tilelayer :url="url"></v-tilelayer>
-        <v-marker v-for="sensor in sensors" :lat-lng="$options.computed.latLng(sensor.latitude, sensor.longitude)"></v-marker>
+        <v-marker v-for="sensor in sensors" :key="sensor.id" :lat-lng="$options.computed.latLng(sensor.latitude, sensor.longitude)"></v-marker>
       </v-map>
     </div>
   <!-- </v-content> -->
