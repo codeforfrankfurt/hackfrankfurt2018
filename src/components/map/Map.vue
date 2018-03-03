@@ -24,6 +24,7 @@ L.Icon.Default.mergeOptions({
 
 export default {
   name: 'Map',
+  props: ['startDate', 'startTime', 'endDate', 'endTime'],
   data () {
     return {
       zoom: 13,
@@ -60,6 +61,9 @@ export default {
   computed: {
     latLng (geometry) {
       return L.latLng(geometry.coordinates[0], geometry.coordinates[1])
+    },
+    format_datetime (date, time) {
+      return `${date} ${time}`
     }
   },
   methods: {
@@ -68,8 +72,8 @@ export default {
       // let lat1 = self.bounds.getNorthWest().lat
       // let lon2 = self.bounds.getSouthEast().lng
       // let lat2 = self.bounds.getSouthEast().lat
-      // let from = '2018-03-03 00:01'
-      // let to = '2018-03-03 23:59'
+      // let from = self.format_datetime(startDate, startTime)
+      // let to = self.format_datetime(endDate, endTime)
       // let API_URL = `data/${lon1}/${lat1}/${lon2}/${lat2}/${from}/${to}`
       let API_URL = `data/fake`
       API.get(API_URL).then(response => {
