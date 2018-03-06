@@ -30,7 +30,7 @@ export default {
       zoom: 13,
       center: L.latLng(50.1109, 8.6821),
       // url: 'https://maps.luftdaten.info/tiles/{z}/{x}/{y}.png',
-      url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       sensors: [
         {
           'id': 1,
