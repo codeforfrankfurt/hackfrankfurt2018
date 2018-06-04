@@ -11,6 +11,11 @@ import Vue2Leaflet from 'vue2-leaflet'
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-hotline'
 
+/* eslint-disable no-extend-native */
+Number.prototype.map = function (inMin, inMax, outMin, outMax) {
+  return (this - inMin) * (outMax - outMin) / (inMax - inMin) + outMin
+}
+
 Vue.use(Vuetify)
 
 Vue.component('v-map', Vue2Leaflet.Map)
