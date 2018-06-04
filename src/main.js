@@ -1,10 +1,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
+// vuetify-related
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+
+// leaflet-related
 import Vue2Leaflet from 'vue2-leaflet'
 import 'leaflet/dist/leaflet.css'
+import 'leaflet-hotline'
 
 Vue.use(Vuetify)
 
