@@ -3,7 +3,6 @@
     <div id="app">
       <v-map :zoom="zoom" :center="center" ref="deviceMap">
         <v-tilelayer :url="url"></v-tilelayer>
-        <!-- <v-marker v-for="sensor in sensors" :key="sensor.id" :lat-lng="$options.computed.latLng(sensor.latitude, sensor.longitude)"></v-marker> -->
         <v-marker v-for="marker in markers" :key="marker.id" :lat-lng="$options.computed.latLng(marker.geometry)"></v-marker>
       </v-map>
     </div>
@@ -4744,18 +4743,6 @@ export default {
       center: L.latLng(50.1109, 8.6821),
       // url: 'https://maps.luftdaten.info/tiles/{z}/{x}/{y}.png',
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      sensors: [
-        {
-          'id': 1,
-          'latitude': 50.1109,
-          'longitude': 8.6821,
-          'altitude': 233.7,
-          'data': [
-            {'P1': 100},
-            {'P2': 200}
-          ]
-        }
-      ],
       markers: [],
       bounds: false
     }
