@@ -1,6 +1,6 @@
 # hackfrankfurt2018
 
-> Visualization of NOx data for #Hackfrankfurt 2018
+> Visualization of fine dust data (PM2.5 and PM10) for #Hackfrankfurt 2018
 
 ## Build Setup
 
